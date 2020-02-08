@@ -1,0 +1,2 @@
+# dunjudge
+bad solutions
