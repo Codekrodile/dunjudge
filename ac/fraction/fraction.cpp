@@ -2,8 +2,8 @@
 using namespace std;
 
 int main() {
-	int x, y; cin >> x >> y;
-	int temp, a = x, b = y;
+	long long int x, y; cin >> x >> y;
+	long long int temp, a = x, b = y;
 	
 	//keep a as the bigger number
 	if (a < b) {
