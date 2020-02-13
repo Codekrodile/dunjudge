@@ -22,12 +22,7 @@ int gw (int N, int *H) {
 				n++;
 			}
 			
-			if (H[n] < H[n+1]) {
-				valley.push(H[n]);
-				cout << "\nvalley first push: " << H[n];
-			}
-			
-			else if (H[n] > H[n+1]) {
+			if (H[n] > H[n+1]) {
 				peak.push(H[n]);
 				cout << "\npeak first push: " << H[n];
 			}
@@ -38,9 +33,12 @@ int gw (int N, int *H) {
 		else if (H[n] < H[n-1]) { //finding valley
 			while (H[n] <= H[n-1] && n < N) {
 				n++;
-			}
-			cout << "\nvalley: " << H[n-1];
-			valley.push(H[n-1]);
+                        }
+   
+                        if (n != N) {
+			        cout << "\nvalley: " << H[n-1];
+			        valley.push(H[n-1]);
+                        }
 		}
 		
 		else if (H[n] > H[n-1]) {
